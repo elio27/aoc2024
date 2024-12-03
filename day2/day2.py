@@ -9,11 +9,11 @@ def isSafe(treatedline):
 	d = treatedline[1] - treatedline[0]
 	last = treatedline[0]
 	
-  for e in treatedline[1:]:
-    if (d>0 and e > last or d<0 and e < last) and abs(e - last) <= 3:
-      last = e
-    else:
-      return False
+	for e in treatedline[1:]:
+		if (d>0 and e > last or d<0 and e < last) and abs(e - last) <= 3:
+      			last = e
+    		else:
+      			return False
 	return True
 
 
