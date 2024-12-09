@@ -33,10 +33,8 @@ def free_space(block):
 
 
 
-
-
 ## Part I
-grid = unpack(load_map("/input 3.txt"))
+grid = unpack(load_map("input 3.txt"))
 while grid[-1]==".": grid.pop()
 free = [i for i, c in enumerate(grid) if c=="."]
 for f in free:
@@ -54,8 +52,8 @@ print(s)
 
 
 ## Part II
-grid = load_map("/input 3.txt")
-for ni in range(0, len(grid), 2)[::-1]:
+grid = load_map("input 3.txt")
+for ni in range(len(grid), -2, -2):
   n = grid[ni]
   for bi in range(1, ni, 2):
     b = grid[bi]
@@ -64,6 +62,7 @@ for ni in range(0, len(grid), 2)[::-1]:
       grid[ni] = ["."]*len(n)
       break
 
+grid = unpack(grid)
 s = 0
 for i in range(len(grid)):
   s += int(grid[i])*i
