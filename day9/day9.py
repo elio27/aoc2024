@@ -53,7 +53,7 @@ print(s)
 
 ## Part II
 grid = load_map("input 3.txt")
-for ni in range(len(grid), -2, -2):
+for ni in range(0, len(grid), 2)[::-1]:
   n = grid[ni]
   for bi in range(1, ni, 2):
     b = grid[bi]
