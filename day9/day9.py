@@ -35,7 +35,6 @@ def free_space(block):
 
 ## Part I
 grid = unpack(load_map("input 3.txt"))
-while grid[-1]==".": grid.pop()
 free = [i for i, c in enumerate(grid) if c=="."]
 for f in free:
   while grid[-1]==".": grid.pop()
