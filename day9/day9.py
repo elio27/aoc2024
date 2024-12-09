@@ -56,12 +56,10 @@ print(s)
 ## Part II
 grid = load_map("/input 3.txt")
 for ni in range(0, len(grid), 2)[::-1]:
-  print(ni/len(grid))
   n = grid[ni]
   for bi in range(1, ni, 2):
     b = grid[bi]
     if free_space(b) >= len(n):
-      #print(b, n)
       grid[bi] = fill_block(b, n)
       grid[ni] = ["."]*len(n)
       break
