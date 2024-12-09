@@ -65,6 +65,7 @@ for ni in range(0, len(grid), 2)[::-1]:
 grid = unpack(grid)
 s = 0
 for i in range(len(grid)):
-  s += int(grid[i])*i
+  if grid[i] != '.':
+    s += int(grid[i])*i
 print(s)
 
